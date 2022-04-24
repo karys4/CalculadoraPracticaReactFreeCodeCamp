@@ -7,13 +7,14 @@ function Boton(props) {
   };
 
   return (
-    <div
+    <button
       className={`boton-contenedor ${
         esOperador(props.children) ? "operador" : ""
       }`.trimEnd()} //trimEnd remueve espacios al final de una cadena de caracteres o de una plantilla
+      onClick={() => props.manejarClic(props.children)}
     >
       {props.children}
-    </div>
+    </button>
   );
 }
 
